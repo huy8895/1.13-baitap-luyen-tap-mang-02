@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    function inputArr(array){
+        let rows;
+        let cols;
+        do {
+            rows = parseInt(prompt('nhap rows'))
+            cols = parseInt(prompt('nhap cols'))
+        } while (rows == '' || cols == '');
+        for(let i = 0;i < rows;i++ ){
+            array[i]=[];
+            for(let j=0;j<cols;j++){
+                array[i][j] = Math.floor(Math.random()*100);
+            }
+        }
+    }
+    function  displayArr(array) {
+        for(let i = 0; i < array.length;i++){
+            document.write('row: ' + i + "<br>");
+            for(let j = 0;j < array[i].length;j++){
+                document.write(array[i][j]+"<br> ");
+            }
+            document.write("<br>");
+        }
+    }
+    let array=[];
+    inputArr(array);
+    displayArr(array);
+</script>
+</body>
+</html>
